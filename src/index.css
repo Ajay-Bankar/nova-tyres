@@ -9,3 +9,16 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+
+@keyframes spin-border {
+  0% { border-color: transparent; }
+  25% { border-color: #ff6b6b; } /* Red */
+  50% { border-color: #feca57; } /* Yellow */
+  75% { border-color: #1dd1a1; } /* Green */
+  100% { border-color: #54a0ff; } /* Blue */
+}
+
+.animate-spin-border {
+  animation: spin-border 3s linear infinite;
+}

@@ -3,22 +3,22 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div
-      className="relative h-[380px] bg-cover bg-center"
+      className="relative h-[380px] bg-contain bg-center"
       style={{
         backgroundImage:
-          "url('../images/hero2.jpg')",
+          "url('../images/hero4.png')",
           opacity: 0.9
         
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute "></div>
 
      
 
       {/* Text Content */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
-        <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
           Drive with Confidence
         </h1>
         <p className="text-lg md:text-2xl text-gray-300 mb-6">
