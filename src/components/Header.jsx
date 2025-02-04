@@ -23,8 +23,11 @@ const Header = () => {
     { label: 'Tyres', path: '/tyres' },
     { label: 'Wheels', path: '/wheels' },
     { label: 'Service/Repairs', path: '/servicerepairs' },
-    
-   
+    { label: 'Fitting/Delivery', path: '/fittingdelivery' },
+    { label: 'Tyre Guide', path: '/tyreguide' },
+    { label: 'Help', path: '/help' },
+
+
   ];
 
   return (
@@ -35,15 +38,15 @@ const Header = () => {
           <button onClick={() => setIsSidebarOpen(true)} className='absolute left-4'>
             <IoIosMenu size={30} color='#e9ecef' />
           </button>
-          
+
           <div className='w-full flex justify-center'>
-            <img 
-              className='w-[150px]  object-cover' 
-              src="../images/nova-logo.png" 
-              alt="Nova Logo" 
+            <img
+              className='w-[150px]  object-cover'
+              src="../images/nova-logo.png"
+              alt="Nova Logo"
             />
           </div>
-          
+
           <div className='absolute right-4 '>
             <IoCartOutline size={30} color='#e9ecef' />
             <div className='absolute -top-2 -right-2 flex justify-center items-center bg-yellow-500 text-white rounded-full w-5 h-5 border border-black text-xs'>
@@ -53,30 +56,30 @@ const Header = () => {
 
           {/* Mobile Sidebar */}
           {isSidebarOpen && (
-            <div 
-              className='fixed inset-0 bg-black bg-opacity-50 z-[100]' 
+            <div
+              className='fixed inset-0 bg-black bg-opacity-50 z-[100]'
               onClick={() => setIsSidebarOpen(false)}
             >
-              <div 
+              <div
                 className='fixed top-0 left-0 w-[80%] h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out'
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className='flex justify-between bg-green-900 items-center p-4 border-b'>
-                  <img 
-                    className='w-[120px] h-[32px] object-cover' 
-                    src="../images/nova-logo.png" 
-                    alt="Nova Logo" 
+                  <img
+                    className='w-[120px] h-[32px] object-cover'
+                    src="../images/nova-logo.png"
+                    alt="Nova Logo"
                   />
                   <button onClick={() => setIsSidebarOpen(false)}>
-                    <IoIosClose size={30} color='#e9ecef'  />
+                    <IoIosClose size={30} color='#e9ecef' />
                   </button>
                 </div>
-                
+
                 <nav className='p-4'>
                   {menuItems.map((item, index) => (
-                    <Link 
-                      key={index} 
-                      to={item.path} 
+                    <Link
+                      key={index}
+                      to={item.path}
                       className='block py-3 border-b hover:bg-gray-100'
                       onClick={() => setIsSidebarOpen(false)}
                     >
@@ -94,29 +97,31 @@ const Header = () => {
           <div className='w-full flex justify-center gap-8 items-center'>
             <div>
               <Link to='/'>
-                <img 
-                  className=' object-cover' 
-                  src="../images/nova-logo.png" 
-                  alt="Nova Logo" 
+                <img
+                  className=' object-cover'
+                  src="../images/nova-logo.png"
+                  alt="Nova Logo"
                 />
               </Link>
             </div>
             {menuItems.slice(0, 4).map((item, index) => (
-      <div key={index} className='flex justify-center items-center gap-2'>
-        <Link className=' text-gray-200 font-semibold text-[1rem]' to={item.path}>
-          {item.label}
-        </Link>
-        {item.label !== 'Home' && (
-          <p><IoIosArrowDown color='#e9ecef' /></p>
-        )}
-      </div>
-    ))}
+              <div key={index} className='flex justify-center items-center gap-2'>
+                <Link className=' text-gray-200 font-semibold text-[1rem]' to={item.path}>
+                  {item.label}
+                </Link>
+                {item.label !== 'Home' && (
+                  <p><IoIosArrowDown color='#e9ecef' /></p>
+                )}
+              </div>
+            ))}
           </div>
-          
+
           <div className='w-full flex justify-end gap-8 items-center'>
             {menuItems.slice(4).map((item, index) => (
               <div key={index} className='flex justify-center items-center gap-2'>
-                <p className='text-gray-200 font-semibold text-[1rem]'>{item.label}</p>
+                <Link to={item.path} className='text-gray-200 font-semibold text-[1rem]'>
+                  {item.label}
+                </Link>
                 <p><IoIosArrowDown color='#e9ecef' /></p>
               </div>
             ))}
