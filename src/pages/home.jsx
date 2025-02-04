@@ -78,7 +78,7 @@ const Home = () => {
                 price: "From $109.99",
               },
             ].map((tyre) => (
-              <div key={tyre.id} className="border rounded-lg overflow-hidden flex flex-col justify-center items-center">
+              <div key={tyre.id} className="border rounded-lg shadow-2xl overflow-hidden flex flex-col justify-center items-center">
                 {/* Tyre Image */}
                 <div className=" p-4">
                   <img
@@ -88,7 +88,7 @@ const Home = () => {
                   />
                 </div>
                 {/* Tyre Details */}
-                <div className="p-4">
+                <div className="p-4  w-full" >
                   <h3 className="font-semibold mb-2">{tyre.title}</h3>
                   <p className="text-gray-600 mb-2">{tyre.description}</p>
                   <p className="text-blue-600 font-bold">{tyre.price}</p>
