@@ -171,10 +171,11 @@ const Home = () => {
       <HeroSection />
 
       
-      <FAQSection />
+      
 
       <PaymentOptions/>
       <TyreCategories />
+      <FAQSection />
 
 
       {/* Call to Action */}
