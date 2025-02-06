@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosArrowDown, IoIosMenu, IoIosClose } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [count, setCount] = useState('0');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const location = useLocation(); // Get the current route
+
+  useEffect(() => {
+    // Scroll to top on page change
+    window.scrollTo(0, 0);
+  }, [location.pathname]); // Runs every time the path changes
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,8 +32,6 @@ const Header = () => {
     { label: 'Fitting/Delivery', path: '/fittingdelivery' },
     { label: 'Tyre Guide', path: '/tyreguide' },
     { label: 'Help', path: '/help' },
-
-
   ];
 
   return (
@@ -41,14 +45,14 @@ const Header = () => {
 
           <div className='w-full flex justify-center'>
             <img
-              className='w-[150px]  object-cover'
+              className='w-[150px] object-cover'
               src="../images/Tyroola_logo.png"
               alt="Tyroola Logo"
             />
           </div>
 
           <div className='absolute right-4 '>
-            <IoCartOutline size={30}  />
+            <IoCartOutline size={30} />
             <div className='absolute -top-2 -right-2 flex justify-center items-center bg-yellow-500 text-white rounded-full w-5 h-5 border border-black text-xs'>
               {count}
             </div>
@@ -71,7 +75,7 @@ const Header = () => {
                     alt="Nova Logo"
                   />
                   <button onClick={() => setIsSidebarOpen(false)}>
-                    <IoIosClose size={30}  />
+                    <IoIosClose size={30} />
                   </button>
                 </div>
 
@@ -98,15 +102,15 @@ const Header = () => {
             <div>
               <Link to='/'>
                 <img
-                  className=' object-cover'
-                   src="../images/Tyroola_logo.png"
+                  className='object-cover'
+                  src="../images/Tyroola_logo.png"
                   alt="Nova Logo"
                 />
               </Link>
             </div>
             {menuItems.slice(0, 4).map((item, index) => (
               <div key={index} className='flex justify-center items-center gap-2'>
-                <Link className=' font-semibold text-[1rem]' to={item.path}>
+                <Link className='font-semibold text-[1rem]' to={item.path}>
                   {item.label}
                 </Link>
                 {item.label !== 'Home' && (
@@ -119,7 +123,7 @@ const Header = () => {
           <div className='w-full flex justify-end gap-8 items-center'>
             {menuItems.slice(4).map((item, index) => (
               <div key={index} className='flex justify-center items-center gap-2'>
-                <Link to={item.path} className=' font-semibold text-[1rem]'>
+                <Link to={item.path} className='font-semibold text-[1rem]'>
                   {item.label}
                 </Link>
                 <p><IoIosArrowDown /></p>

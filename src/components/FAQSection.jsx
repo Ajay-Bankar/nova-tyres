@@ -28,8 +28,8 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-16">
-      <div className="container mx-auto px-6">
+    <div className="bg-gray-50 py-16 flex justify-center ">
+      <div className="container w-[600px] px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
@@ -53,7 +53,7 @@ const FAQSection = () => {
               </button>
               {/* Answer */}
               {activeIndex === index && (
-                <div className="p-4 text-gray-600 border-t bg-gray-50">
+                <div className="p-4 text-base  font-normal border-t bg-gray-200">
                   {faq.answer}
                 </div>
               )}

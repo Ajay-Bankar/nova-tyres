@@ -4,6 +4,7 @@ import FAQSection from '../components/FAQSection';
 import HeroSection from '../components/HeroSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import PaymentOptions from '../components/PaymentOptions';
+import TyreCategories from '../components/TyreCategories';
 
 
 
@@ -173,6 +174,7 @@ const Home = () => {
       <FAQSection />
 
       <PaymentOptions/>
+      <TyreCategories />
 
 
       {/* Call to Action */}
