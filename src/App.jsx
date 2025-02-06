@@ -18,7 +18,7 @@ function App() {
     <BrowserRouter>
 
       <Header />
-      <div className="mt-[80px]">
+      <div className="mt-[60px]">
 
 
         <Routes>

@@ -38,7 +38,7 @@ const Header = () => {
     <>
       {isSmallScreen ? (
         // Mobile Header
-        <div className='flex justify-between items-center px-4 fixed top-0 w-full h-[80px] bg-gray-200 z-50 shadow-md'>
+        <div className='flex justify-between items-center px-4 fixed top-0 w-full h-[60px] bg-gray-200 z-50 shadow-md'>
           <button onClick={() => setIsSidebarOpen(true)} className='absolute left-4'>
             <IoIosMenu size={30} />
           </button>

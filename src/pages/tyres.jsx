@@ -54,7 +54,7 @@ const TyrePage = () => {
   return (
     <div className={`${isSmallScreen ? 'flex-col' : 'flex'} min-h-screen`}>
       {/* Sidebar */}
-      <aside className={`${isSmallScreen ? 'w-full' : 'w-80 min-h-screen'} bg-gray-800 text-white p-4`}>
+      <aside className={`${isSmallScreen ? 'w-full' : 'w-80 min-h-screen'} bg-gray-800 text-white p-4 mt-4`}>
         <h2 className="text-2xl font-bold mb-4">Product categories</h2>
         <ul className={`${isSmallScreen ? 'flex flex-row overflow-x-auto gap-2 whitespace-nowrap' : 'flex flex-col gap-2'} scrollbar-hide`}>
           {tyreTypes.map((tyre) => (
@@ -70,7 +70,7 @@ const TyrePage = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-grow bg-gray-100 px-4">
+      <main className="flex-grow bg-gray-100 px-4 mt-4">
         <h2 className="text-3xl font-bold p-4 text-center">
           {tyreTypes.find((tyre) => tyre.id === selectedTyreType)?.name}
         </h2>
