@@ -8,7 +8,7 @@ import Servicerepairs from './pages/servicerepairs';
 import Footer from './components/Footer'
 import Fittingdelivery from './pages/fittingdelivery';
 import Tyreguide from './pages/tyreguide';
-import Help from './pages/help';
+import Gallery from './pages/gallery';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <Route path="/servicerepairs" element={<Servicerepairs />} />
           <Route path="/fittingdelivery" element={<Fittingdelivery />} />
           <Route path="/tyreguide" element={<Tyreguide />} />
-          <Route path="/help" element={<Help />} />
+          <Route path="/gallery" element={<Gallery />} />
 
 
         </Routes>

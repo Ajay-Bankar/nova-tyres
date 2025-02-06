@@ -31,7 +31,7 @@ const Header = () => {
     { label: 'Service/Repairs', path: '/servicerepairs' },
     { label: 'Fitting/Delivery', path: '/fittingdelivery' },
     { label: 'Tyre Guide', path: '/tyreguide' },
-    { label: 'Help', path: '/help' },
+    { label: 'Gallery', path: '/gallery' },
   ];
 
   return (
