@@ -9,12 +9,12 @@ const FittingDelivery = () => {
         className="relative w-full h-[200px] sm:h-[400px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url('/images/fit1.jpg')` }}
       >
-        <div className="absolute inset-0 bg-black/50 px-4"></div>
+        <div className="absolute inset-0 bg-black/20 px-4"></div>
         <div className="relative z-10 px-4">
-          <h1 className="sm:text-5xl md:text-6xl text-center text-2xl font-bold text-white">
+          <h1 className="sm:text-5xl md:text-6xl text-center text-xl font-bold text-white">
             Hassle-Free Tyre Fitting & Delivery
           </h1>
-          <p className="sm:text-lg md:text-xl text-center text-lg text-gray-300 mt-2 max-w-3xl mx-auto">
+          <p className="sm:text-lg md:text-xl text-center text-sm text-gray-300 mt-2 max-w-3xl mx-auto">
             Get premium tyres delivered and fitted at your convenience—whether at home, work, or a nearby fitting station.
           </p>
         </div>

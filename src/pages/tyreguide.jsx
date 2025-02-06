@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const Tyreguide = () => {
   const tyreguideData = [
@@ -49,15 +50,15 @@ const Tyreguide = () => {
         style={{ backgroundImage: `url('/images/tguidehero.jpg')` }}
       >
         <div className="p-6 rounded-lg text-center text-white">
-          <h1 className=" text-2xl font-medium sm:font-bold sm:text-5xl">Your Ultimate Tyre Guide</h1>
-          <p className=" text-sm sm:text-lg mt-2">
+          <h1 className="text-2xl font-medium sm:font-bold sm:text-5xl">Your Ultimate Tyre Guide</h1>
+          <p className="text-sm sm:text-lg mt-2">
             Everything you need to know about choosing and maintaining tyres.
           </p>
         </div>
       </section>
 
       {/* Tyre Guide Cards */}
-      <section className="w-full border-2  px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <section className="w-full border-2 px-4 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {tyreguideData.map((item, index) => (
           <div
             key={index}
@@ -67,15 +68,16 @@ const Tyreguide = () => {
             <div className="p-4 flex flex-col flex-grow w-full">
               <h2 className="text-xl font-semibold text-center">{item.title}</h2>
 
-              {/* Hide description on small screens */}
+              {/* Show description by default on large screens */}
               <p className="text-gray-600 mt-2 hidden sm:block flex-grow">{item.description}</p>
 
-              {/* Learn More Button */}
+              {/* Learn More Button (Only for Small Devices) */}
               <button
-                className="mt-4 px-4 py-2 w-full bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                className="mt-4 px-4 py-2 w-full bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition sm:hidden flex items-center justify-center gap-2"
                 onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
               >
-                Learn More
+                {openFAQ === index ? "Show Less" : "Learn More"}
+                {openFAQ === index ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
               </button>
             </div>
 
