@@ -97,7 +97,7 @@ const Header = () => {
         </div>
       ) : (
         // Desktop Header
-        <div className='flex justify-between items-center px-8 fixed top-0 w-full h-[80px] bg-gray-200 z-50 shadow-md'>
+        <div className='flex justify-between items-center px-8 fixed top-0 w-full h-[60px] bg-gray-300 z-50 shadow-md'>
           <div className='w-full flex justify-center gap-8 items-center'>
             <div>
               <Link to='/'>
