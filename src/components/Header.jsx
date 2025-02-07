@@ -46,8 +46,8 @@ const Header = () => {
           <div className='w-full flex justify-center'>
             <img
               className='w-[150px] object-cover'
-              src="../images/Tyroola_logo.png"
-              alt="Tyroola Logo"
+              src="../images/nova-new.png"
+              alt="Nova Logo"
             />
           </div>
 
@@ -71,7 +71,7 @@ const Header = () => {
                 <div className='flex justify-between bg-gray-200 items-center p-4 border-b'>
                   <img
                     className='w-[120px] h-[32px] object-cover'
-                    src="../images/Tyroola_logo.png"
+                    src="../images/nova-new.png"
                     alt="Nova Logo"
                   />
                   <button onClick={() => setIsSidebarOpen(false)}>
@@ -103,7 +103,7 @@ const Header = () => {
               <Link to='/'>
                 <img
                   className='object-cover'
-                  src="../images/Tyroola_logo.png"
+                  src="../images/nova-new.png"
                   alt="Nova Logo"
                 />
               </Link>
